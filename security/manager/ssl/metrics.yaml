@@ -1,0 +1,75 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# Adding a new metric? We have docs for that!
+# https://firefox-source-docs.mozilla.org/toolkit/components/glean/user/new_definitions_file.html
+
+---
+$schema: moz://mozilla.org/schemas/glean/metrics/2-0-0
+$tags:
+  - 'Core :: Security: PSM'
+
+data_storage:
+  alternate_services:
+    type: quantity
+    description:
+      The number of entries stored in the AlternateServices nsIDataStorage
+    bugs:
+      - https://bugzilla.mozilla.org/show_bug.cgi?id=1873080
+    data_reviews:
+      - https://bugzilla.mozilla.org/show_bug.cgi?id=1873080
+    data_sensitivity:
+      - interaction
+    notification_emails:
+      - dkeeler@mozilla.com
+    expires: never
+    unit: entries
+  client_auth_remember_list:
+    type: quantity
+    description:
+      The number of entries stored in the ClientAuthRememberList nsIDataStorage
+    bugs:
+      - https://bugzilla.mozilla.org/show_bug.cgi?id=1873080
+    data_reviews:
+      - https://bugzilla.mozilla.org/show_bug.cgi?id=1873080
+    data_sensitivity:
+      - interaction
+    notification_emails:
+      - dkeeler@mozilla.com
+    expires: never
+    unit: entries
+  site_security_service_state:
+    type: quantity
+    description:
+      The number of entries stored in the SiteSecurityServiceState nsIDataStorage
+    bugs:
+      - https://bugzilla.mozilla.org/show_bug.cgi?id=1873080
+    data_reviews:
+      - https://bugzilla.mozilla.org/show_bug.cgi?id=1873080
+    data_sensitivity:
+      - interaction
+    notification_emails:
+      - dkeeler@mozilla.com
+    expires: never
+    unit: entries
+
+oskeystore:
+  self_test:
+    type: labeled_boolean
+    description:
+      Whether or not each step of the OSKeyStore self test succeeded.
+    bugs:
+      - https://bugzilla.mozilla.org/show_bug.cgi?id=1855759
+    data_reviews:
+      - https://bugzilla.mozilla.org/show_bug.cgi?id=1855759
+    data_sensitivity:
+      - interaction
+    notification_emails:
+      - dkeeler@mozilla.com
+    expires: 126
+    labels:
+      - generate
+      - available
+      - encrypt
+      - decrypt
