@@ -12,9 +12,9 @@ if CONFIG["MOZ_HAS_REMOTE"]:
     DIRS += ["remote"]
 
 DIRS += [
-    "aboutcheckerboard",
-    "aboutmemory",
-    "aboutprocesses",
+#    "aboutcheckerboard",
+#    "aboutmemory",
+#    "aboutprocesses",
     "alerts",
     "antitracking",
     "apppicker",
