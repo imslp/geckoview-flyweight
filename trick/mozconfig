@@ -8,54 +8,31 @@ ac_add_options --enable-project=mobile/android
 ac_add_options --target=aarch64
 # For x86_64 emulators (and x86_64 devices, which are even less common):
 # ac_add_options --target=x86_64
-ac_add_options --disable-debug
-ac_add_options --enable-release
-ac_add_options --enable-optimize
-ac_add_options --disable-webrtc
-#ac_add_options --disable-printing
-ac_add_options --disable-profiling
-ac_add_options --enable-minify
-ac_add_options --disable-wmf
-ac_add_options --disable-ffmpeg
-#ac_add_options --disable-av1
-ac_add_options --disable-jxl
-
-ac_add_options --disable-geckodriver
-ac_add_options --disable-webdriver
-ac_add_options RUSTC_OPT_LEVEL= z
-ac_add_options OS_ARCH_OPT_LEVEL= z
-ac_add_options MOZ_STDCXX_COMPAT_OPT_LEVEL= z
-ac_add_options MOZ_BUILD_APP_OPT_LEVEL= z
-ac_add_options MOZ_DMD_OPT_LEVEL= z
-ac_add_options --enable-optimize=-Oz
-
 ac_add_options --disable-tests
+ac_add_options --enable-release
 ac_add_options --without-wasm-sandboxed-libraries
+ac_add_options --enable-optimize=-Oz
+ac_add_options --disable-debug
 ac_add_options --disable-crashreporter
 ac_add_options --disable-updater
+
+ac_add_options --disable-webrtc
+ac_add_options --disable-geckodriver
+ac_add_options --disable-webdriver
+
+
 ac_add_options --prefix=/usr
 ac_add_options --enable-hardening
 ac_add_options --enable-rust-simd
 ac_add_options --disable-bootstrap
 ac_add_options --enable-lto
-ac_add_options --disable-real-time-tracing
-ac_add_options --disable-synth-speechd
-ac_add_options --disable-webspeech
-ac_add_options --disable-proxy-direct-failover
-#ac_add_options --disable-accessibility
-ac_add_options --disable-backgroundtasks
-ac_add_options --disable-pref-extensions
-# ac_add_options --disable-startupcache
-ac_add_options --disable-negotiateauth
-ac_add_options --disable-parental-controls
-ac_add_options --disable-system-extension-dirs
-ac_add_options --disable-universalchardet
-ac_add_options --disable-zipwriter
-ac_add_options --disable-system-policies
-ac_add_options --disable-legacy-profile-creation
-ac_add_options --disable-application
-ac_add_options --disable-system-ffi
-ac_add_options --disable-system-pixman
-ac_add_options --disable-elf-hack
-ac_add_options --disable-strip
 
+#ac_add_options RUSTC_OPT_LEVEL=-Oz
+ac_add_options OS_ARCH_OPT_LEVEL=-Oz
+ac_add_options MOZ_STDCXX_COMPAT_OPT_LEVEL=-Oz
+ac_add_options MOZ_BUILD_APP_OPT_LEVEL=-Oz
+ac_add_options MOZ_DMD_OPT_LEVEL=-Oz
+
+#ac_add_options --disable-accessibility
+
+export RUSTC_OPT_LEVEL=z
