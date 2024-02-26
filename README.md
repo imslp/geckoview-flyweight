@@ -28,7 +28,7 @@ Geckoview can be built on Windows or Linux. This instruction is mainly for Linux
 
 3. Build
 
-    - Copy the mozconfig file from ./trick/mozconfig and replace the one in the root directory.
+    - Copy the mozconfig file from ./trick/mozconfig (or ./trick/mozconfig-flyweight and rename it to mozconfig) and replace the one in the root directory.
     - Run ``` ./mach build ``` to build Geckoview
 
     Note that building Geckoview is quite complicated and takes time. Sometimes rebuilding the source also produces errors.
